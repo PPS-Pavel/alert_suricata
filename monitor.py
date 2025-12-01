@@ -19,6 +19,7 @@ with open("/var/log/suricata/fast.log", "r") as f:
             for user_id in USERS:
                 requests.post(
                     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-                    data={'chat_id': user_id, 'text': f'🚨 {line.strip()}'}
+                    data={'chat_id': user_id, 'text': line.strip()'}
                 )
+
 
