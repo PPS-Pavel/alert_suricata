@@ -1,8 +1,8 @@
 import requests, time
 
-TOKEN = "ВАШ_ТОКЕН"
-USERS = ["123456789"]
-SIDS = ["1000002", "1000003"]
+TOKEN = "8249012810:AAFKQ24Kp_EoMvA6hEze1aVz9zVGLB28YOA"
+USERS = ["654891316"]
+SIDS = ["1000002", "1000003","1000004", "1000005"]
 
 # Открываем файл и сразу переходим в конец
 with open("/var/log/suricata/fast.log", "r") as f:
@@ -21,3 +21,4 @@ with open("/var/log/suricata/fast.log", "r") as f:
                     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
                     data={'chat_id': user_id, 'text': f'🚨 {line.strip()}'}
                 )
+
